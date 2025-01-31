@@ -2,10 +2,13 @@
   "name": "popstop-desktop-app",
   "version": "1.0.0",
   "description": "An Electron-based desktop application for monitoring and tracking in-house drink orders in real-time.",
-  "main": "main.js",
+  "main": "dist/main.js",
   "scripts": {
-    "test": "echo \"No tests available yet\"",
-    "start": "electron ."
+    "start": "concurrently \"npm run start-react\" \"npm run start-electron\"",
+    "start-react": "react-scripts start",
+    "start-electron": "wait-on http://localhost:3000 && electron .",
+    "build": "react-scripts build",
+    "build-electron": "tsc"
   },
   "repository": {
     "type": "git",
@@ -22,7 +25,30 @@
   "homepage": "https://github.com/PopStopOrg/desktop-app#readme",
   "type": "commonjs",
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3",
+    "concurrently": "^9.1.2",
     "electron": "^34.0.2",
-    "electron-reload": "^2.0.0-alpha.1"
+    "electron-reload": "^2.0.0-alpha.1",
+    "react-scripts": "^5.0.1",
+    "typescript": "^4.9.5",
+    "wait-on": "^8.0.2"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

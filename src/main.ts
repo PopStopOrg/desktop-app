@@ -1,8 +1,6 @@
 const { app, BrowserWindow } = require('electron');
 const path = require('path');
 
-app.isPackaged || require('electron-reload')(__dirname);
-
 function createWindow() {
     const win = new BrowserWindow({
         width: 800,
@@ -11,10 +9,16 @@ function createWindow() {
             nodeIntegration: true,
             contextIsolation: false,
         }
-    })
+    });
 
-    win.loadFile('index.html');
+    // Detect if running in development mode
+    const isDev = !app.isPackaged;
 
+    if (isDev) {
+        win.loadURL('http://localhost:3000');
+    } else {
+        win.loadURL(`file://${path.join(__dirname, '../build/index.html')}`);
+    }
 }
 
 app.whenReady().then(() => {
@@ -24,11 +28,11 @@ app.whenReady().then(() => {
         if (BrowserWindow.getAllWindows().length === 0) {
             createWindow();
         }
-    })
-})
+    });
+});
 
 app.on('window-all-closed', () => {
     if (process.platform !== 'darwin') {
         app.quit();
     }
-})
+});
