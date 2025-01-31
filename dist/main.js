@@ -7,16 +7,16 @@ function createWindow() {
         height: 600,
         webPreferences: {
             nodeIntegration: true,
-            contextIsolation: false,
+            contextIsolation: false
         }
     });
-    // Detect if running in development mode
-    const isDev = !app.isPackaged;
+    const isDev = process.env.NODE_ENV === 'development';
     if (isDev) {
         win.loadURL('http://localhost:3000');
+        win.webContents.openDevTools(); // Optional: open dev tools in dev mode
     }
     else {
-        win.loadURL(`file://${path.join(__dirname, '../build/index.html')}`);
+        win.loadFile(path.join(__dirname, '../build/index.html'));
     }
 }
 app.whenReady().then(() => {
