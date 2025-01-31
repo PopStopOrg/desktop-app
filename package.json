@@ -18,5 +18,9 @@
   "bugs": {
     "url": "https://github.com/PopStopOrg/desktop-app/issues"
   },
-  "homepage": "https://github.com/PopStopOrg/desktop-app#readme"
+  "homepage": "https://github.com/PopStopOrg/desktop-app#readme",
+  "type": "commonjs",
+  "devDependencies": {
+    "electron": "^34.0.2"
+  }
 }
