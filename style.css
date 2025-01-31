@@ -1,60 +1,37 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: Inter, sans-serif;
+  color: white;
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-color: #f4f4f4;
+  background-color: white;
 }
 
-.container {
-  width: 90%;
-  max-width: 1200px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 16px;
-  padding: 16px;
+.navbar {
+  background-color: #6E5AE2;
+  color: white;
+  padding: 15px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.main {
+  margin-top: 80px;
+  padding: 20px;
+  color: black;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
 }
 
 .card {
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: transform 0.2s;
-}
-
-.card:hover {
-  transform: scale(1.05);
-}
-
-.card img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-}
-
-.card-drinkName {
-  font-size: 1.2em;
-  margin-bottom: 8px;
-}
-
-.card-ingredients {
-  font-size: 0.9em;
-  color: #555;
-  margin-bottom: 12px;
-}
-
-.card-customNotes {
-  font-size: 1em;
-  font-weight: bold;
-  color: #333;
-}
-
-.card-orderStatus {
-  font-size: 1em;
-  font-weight: bold;
-  color: #333;
+  background-color: white;
+  color: black;
+  padding: 20px;
+  margin: 20px;
+  width: 250px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }

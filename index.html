@@ -7,82 +7,15 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container" id="product-list">
-      <!-- Cards will be populated here by JavaScript -->
-    </div>
-
-    <script>
-      // Dummy data for products
-      const products = [
-        {
-          orderID: 1,
-          drinkName: "Mango Sprite",
-          ingredients: "Mango, Sprite",
-          customNotes: "",
-          orderStatus: "Pending",
-          image: "./logo.png",
-        },
-        {
-          orderID: 2,
-          drinkName: "Piña Sprite",
-          ingredients: "Piña, Sprite",
-          customNotes: "No piña",
-          orderStatus: "Pending",
-          image: "./logo.png",
-        },
-        {
-          orderID: 3,
-          drinkName: "Apple Sprite",
-          ingredients: "Apple, Sprite",
-          customNotes: "",
-          orderStatus: "Ready ",
-          image: "./logo.png",
-        },
-        {
-          orderID: 4,
-          drinkName: "Banana Sprite",
-          ingredients: "Banana, Sprite",
-          customNotes: "Blended",
-          orderStatus: "In-progress",
-          image: "./logo.png",
-        },
-        {
-          orderID: 5,
-          drinkName: "Cherry Sprite",
-          ingredients: "Cherry, Sprite",
-          customNotes: "",
-          orderStatus: "In-progress",
-          image: "./logo.png",
-        },
-        {
-          orderID: 6,
-          drinkName: "Guava Sprite",
-          ingredients: "Guava, Sprite",
-          customNotes: "",
-          orderStatus: "Ready",
-          image: "./logo.png",
-        },
-      ];
-
-      // Populate product cards dynamically
-      const productList = document.getElementById("product-list");
-
-      products.forEach((product) => {
-        const card = document.createElement("div");
-        card.className = "card";
-
-        card.innerHTML = `
-        <img src="${product.image}" alt="${product.drinkName}">
-        <div class="card-body">
-          <h3 class="card-drinkName">${product.drinkName}</h3>
-          <p class="card-ingredients">Ingredients: ${product.ingredients}</p>
-          <p class="card-customNotes">Custom notes: ${product.customNotes}</p>
-          <p class="card-orderStatus">Order Status: ${product.orderStatus}</p>
-        </div>
-      `;
-
-        productList.appendChild(card);
-      });
-    </script>
+    <nav class="navbar">
+        <h1>Electron App</h1>
+    </nav>
+    <main class="main">
+      <div class="card">Card 1</div>
+      <div class="card">Card 2</div>
+      <div class="card">Card 3</div>
+      <div class="card">Card 4</div>
+      <div class="card">Card 5</div>
+    </main>
   </body>
 </html>
