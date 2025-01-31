@@ -56,3 +56,5 @@ To start developing or modifying the application:
 ## 🛠️ Support:
 
 For support or further inquiries, please contact the development team at [support@popstop.com](mailto:support@popstop.com).
+
+...
