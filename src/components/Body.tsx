@@ -3,40 +3,40 @@ import Orders from "./Orders";
 
 const Body: React.FC = () => {
   return (
-    <div className="main">
+    <div className="main flex flex-wrap">
       <Orders
-        color="#e34a4a"
+        color="bg-rose-500"
         drinkName="Sprite-Banana"
         orderID={101}
         ingredients="Sprite, Banana"
       />
       <Orders
-        color="#61BB34"
+        color="bg-amber-400"
         drinkName="Piña-Fanta"
         orderID={102}
         ingredients="Sprite, Banana"
       />
       <Orders
-        color="#F3BF45"
+        color="bg-green-600"
         drinkName="Orange-Vanilla"
         orderID={103}
         ingredients="Sprite, Banana"
       />
       
       <Orders
-        color="#4C3B4D"
+        color="bg-zinc-500"
         drinkName="Sprite-Banana"
         orderID={105}
         ingredients="Sprite, Banana"
       />
       <Orders
-        color="#F3BF45"
-        drinkName="Sprite-Banana"
+        color="bg-rose-500"
+        drinkName="orale"
         orderID={106}
         ingredients="Sprite, Banana"
       />
       <Orders
-        color="#61BB34"
+        color="bg-amber-400"
         drinkName="Sprite-Banana"
         orderID={107}
         ingredients="Sprite, Banana"
