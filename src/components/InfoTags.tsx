@@ -1,5 +1,4 @@
 import React from 'react';
-import '../styles/InfoTags.css';
 
 interface InfoTagsProps {
     number: number;
@@ -9,9 +8,9 @@ interface InfoTagsProps {
 
 const InfoTags: React.FC <InfoTagsProps> = ({number, description, color = "#f0f0f0"}) => {
     return (
-    <div className="info-tag" style={{ backgroundColor: color }}>
-        <span className="info-tag-number">{number}</span>
-        <span className="info-tag-description">{description}</span>
+    <div className={`p-1 rounded-md shadow-md text-black ${color}`}>
+        <span className="info-tag-number justify-center mx-1">{number}</span>
+        <span className="info-tag-description mx-1">{description}</span>
     </div>
     );
 };

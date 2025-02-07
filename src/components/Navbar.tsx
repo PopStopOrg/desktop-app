@@ -1,22 +1,23 @@
 import React from "react";
-import HamMenu from "./HamMenu";
+import { Bars3Icon } from "@heroicons/react/20/solid";
 import InfoTags from "./InfoTags";
 import logo from "./logo.png";
-import "../styles/Navbar.css";
 
 const Navbar: React.FC = () => {
   return (
-    <nav className="navbar">
-      <HamMenu />
-      <div className="container">
-        <InfoTags number={3} description="New" color="#e34a4a" />
-        <InfoTags number={5} description="Process" color="#F3BF45" />
-        <InfoTags number={10} description="Ready" color="#61BB34" />
-        <InfoTags number={2} description="Served" color="#4C3B4D" />
-
-        <h1>Register 1</h1>
-        <img src={logo} alt="logo" className="logo" />
+    <nav className=" flex items-center justify-between bg-gradient-to-r from-violet-700 via-fuchsia-600 to-pink-600 p-4">
+      
+      <img src={logo} alt="logo" className="logo rounded-lg max-w-16 max-h-16 object-contain" />
+      
+      <div className="info-tags flex gap-4">
+        <InfoTags number={3} description="New" color="bg-rose-500" />
+        <InfoTags number={5} description="Process" color="bg-amber-400" />
+        <InfoTags number={10} description="Ready" color="bg-green-600" />
+        <InfoTags number={2} description="Served" color="bg-zinc-500" />
+        <Bars3Icon className="w-8 h-8 text-white" />
+        {/* <h1 className="text-white">Register 1</h1> */}
       </div>
+
     </nav>
   );
 };

@@ -23,12 +23,7 @@ const Body: React.FC = () => {
         orderID={103}
         ingredients="Sprite, Banana"
       />
-      <Orders
-        color="#e34a4a"
-        drinkName="Lime-Pomegranate"
-        orderID={104}
-        ingredients="Sprite, Banana"
-      />
+      
       <Orders
         color="#4C3B4D"
         drinkName="Sprite-Banana"
