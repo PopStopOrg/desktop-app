@@ -1,6 +1,5 @@
 import React from "react";
 import Orders from "./Orders";
-import "../styles/Body.css";
 
 const Body: React.FC = () => {
   return (

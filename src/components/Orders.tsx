@@ -1,5 +1,4 @@
 import React from "react";
-import "../styles/Orders.css";
 
 interface OrderProps {
     drinkName: string;
@@ -10,7 +9,7 @@ interface OrderProps {
 
 const Orders: React.FC <OrderProps> = ({ drinkName, orderID, ingredients, color }) => {
     return (
-        <div className="orders" style={{ backgroundColor: color }}>
+        <div className="orders shadow-md" style={{ backgroundColor: color }}>
             <span className="drink-name">{drinkName}</span>
             <span className="orderID">{orderID}</span>
             <span className="ingredients">{ingredients}</span>

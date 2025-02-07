@@ -5,7 +5,7 @@ import './styles/App.css';
 
 const App = () => {
   return (
-    <div className="App">
+    <div className="App bg-slate-200">
       <Navbar />
       <Body />
     </div>
